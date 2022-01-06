@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+   redirect(route('products.index'))->send();
+});
+
 Route::resources([
     'products' => ProductController::class,
     'collections' => CollectionController::class,
