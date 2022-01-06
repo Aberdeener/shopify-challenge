@@ -3,8 +3,15 @@
 👋 Hi, thanks for checking out my submission :)
 
 It is written in PHP using the Laravel framework.
+There are some basic CRUD tests located in the `tests` directory.
 
-To get this running, you'll first need to install [Composer](https://getcomposer.org).
+## Installation
+To get this running, you'll first need to install PHP onto your computer.
+- There are installation instructions [here](https://www.php.net/manual/en/install.php)
+- *Make sure you install PHP `7.2`, `7.4` or `8.0`, other versions are not supported by Laravel.*
+- To make sure PHP is installed correctly, you can run the following command in your terminal `php -v`
+
+Secondly, we need [Composer](https://getcomposer.org) to manage our dependencies.
 - Check out the install guides [here](https://getcomposer.org/doc/00-intro.md) for most operating systems.
 - Make sure Composer is working by running `composer -V` in your command line.
 ---
@@ -41,3 +48,7 @@ Almost done!
 
 🎉 Congrats! You're all set up!
 
+---
+
+## Tests
+To run the tests for this app, simply open your terminal to the directory where you extracted the repository and execute `php artisan test`.
