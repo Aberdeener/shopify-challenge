@@ -49,7 +49,5 @@ Almost done!
 
 🎉 Congrats! You're all set up!
 
----
-
 ## :test_tube: Tests
 To run the tests for this app, simply open your terminal to the directory where you extracted the repository and execute `php artisan test`.
