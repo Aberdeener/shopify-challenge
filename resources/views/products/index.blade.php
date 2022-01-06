@@ -21,15 +21,15 @@
                     <td>{{ $product->updated_at->format('M jS Y h:ia') }}</td>
                     <td class="has-text-right">
                         <a class="button is-secondary" href="{{ route('products.edit', $product) }}" title="Edit">
-                        <span class="icon is-small">
-                          <i class="fas fa-pencil"></i>
-                        </span>
+                            <span class="icon is-small">
+                              <i class="fas fa-pencil"></i>
+                            </span>
                         </a>
 
-                        <button class="button is-danger" title="Delete">
-                        <span class="icon is-small">
-                          <i class="fas fa-trash"></i>
-                        </span>
+                        <button class="button is-danger" onclick="deleteProduct({{ $product->id }})" title="Delete">
+                            <span class="icon is-small">
+                              <i class="fas fa-trash"></i>
+                            </span>
                         </button>
                     </td>
                 </tr>
@@ -37,4 +37,19 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+        const deleteProduct = (id) => {
+            if (confirm('Are you sure you want to delete this product?')) {
+                fetch('/products/' + id, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                }).then(_ => {
+                    window.location.reload();
+                });
+            }
+        }
+    </script>
 @endsection

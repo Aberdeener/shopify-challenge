@@ -16,6 +16,8 @@
 
 <div class="container">
 
+    @include('includes.messages')
+
     @yield('content')
 
     @include('includes.footer')
