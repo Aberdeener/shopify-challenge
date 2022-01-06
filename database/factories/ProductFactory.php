@@ -18,7 +18,7 @@ class ProductFactory extends Factory
                 $this->faker->numberBetween(1, 2),
                 true
             ),
-            'collection' => $this->faker->numberBetween(1, 10),
+            'collection_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }
