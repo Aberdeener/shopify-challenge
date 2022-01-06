@@ -26,7 +26,7 @@
                             </span>
                         </a>
 
-                        <button class="button is-danger" title="Delete">
+                        <button class="button is-danger" onclick="deleteCollection({{ $collection->id }})" title="Delete">
                             <span class="icon is-small">
                               <i class="fas fa-trash"></i>
                             </span>
@@ -41,4 +41,23 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+        const deleteCollection = (id) => {
+            if (confirm('Are you sure you want to delete this collection?')) {
+                fetch('/collections/' + id, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                }).then(response => {
+                    if (response.status === 403) {
+                        alert('This collection has products in it, so it cannot be deleted yet.');
+                    } else {
+                        window.location.reload();
+                    }
+                });
+            }
+        }
+    </script>
 @endsection

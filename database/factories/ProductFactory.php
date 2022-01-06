@@ -14,10 +14,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->words(
-                $this->faker->numberBetween(1, 2),
-                true
-            ),
+            'name' => $this->faker->words(2, true),
             'stock' => $this->faker->numberBetween(0, 100),
             'collection_id' => $this->faker->numberBetween(1, 10),
         ];

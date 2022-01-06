@@ -74,6 +74,10 @@ class CollectionController extends Controller
      */
     public function destroy(Collection $collection)
     {
+        if ($collection->product_count() > 0) {
+            abort(403);
+        }
+
         $collection->delete();
 
         session()->flash('success', 'Collection deleted successfully');
