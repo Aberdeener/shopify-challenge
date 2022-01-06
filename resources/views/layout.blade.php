@@ -16,8 +16,6 @@
 
 <div class="container">
 
-    <br>
-
     @yield('content')
 
     @include('includes.footer')
