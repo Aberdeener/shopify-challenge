@@ -3,9 +3,10 @@
 👋 Hi, thanks for checking out my submission :)
 
 It is written in PHP using the Laravel framework.
+
 There are some basic CRUD tests located in the `tests` directory.
 
-## Installation
+## :package: Installation
 To get this running, you'll first need to install PHP onto your computer.
 - There are installation instructions [here](https://www.php.net/manual/en/install.php)
 - *Make sure you install PHP `7.2`, `7.4` or `8.0`, other versions are not supported by Laravel.*
@@ -50,5 +51,5 @@ Almost done!
 
 ---
 
-## Tests
+## :test_tube: Tests
 To run the tests for this app, simply open your terminal to the directory where you extracted the repository and execute `php artisan test`.
