@@ -35,11 +35,9 @@ class ProductController extends Controller
     {
         Product::create($request->all());
 
-        session()->put('success', 'Product created successfully');
+        session()->flash('success', 'Product created successfully');
 
-        return view('products.index', [
-            'products' => Product::all(),
-        ]);
+        return redirect()->route('products.index');
     }
 
     /**
@@ -69,11 +67,9 @@ class ProductController extends Controller
     {
         $product->update($request->all());
 
-        session()->put('success', 'Product updated successfully');
+        session()->flash('success', 'Product updated successfully');
 
-        return view('products.index', [
-            'products' => Product::all(),
-        ]);
+        return redirect()->route('products.index');
     }
 
     /**
@@ -83,10 +79,8 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        session()->put('success', 'Product deleted successfully');
+        session()->flash('success', 'Product deleted successfully');
 
-        return view('products.index', [
-            'products' => Product::all(),
-        ]);
+        return redirect()->route('products.index');
     }
 }

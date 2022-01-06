@@ -34,9 +34,7 @@ class CollectionController extends Controller
 
         session()->put('success', 'Collection created successfully');
 
-        return view('collections.index', [
-            'collections' => Collection::all(),
-        ]);
+        return redirect()->route('collections.index');
     }
 
     /**
@@ -66,11 +64,9 @@ class CollectionController extends Controller
     {
         $collection->update($request->all());
 
-        session()->put('success', 'Collection updated successfully');
+        session()->flash('success', 'Collection updated successfully');
 
-        return view('collections.index', [
-            'collections' => Collection::all(),
-        ]);
+        return redirect()->route('collections.index');
     }
 
     /**
@@ -80,10 +76,8 @@ class CollectionController extends Controller
     {
         $collection->delete();
 
-        session()->put('success', 'Collection deleted successfully');
+        session()->flash('success', 'Collection deleted successfully');
 
-        return view('collections.index', [
-            'collections' => Collection::all(),
-        ]);
+        return redirect()->route('collections.index');
     }
 }
