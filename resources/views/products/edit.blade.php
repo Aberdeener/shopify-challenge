@@ -1,7 +1,7 @@
 @extends('layout', ['page' => 'Edit Product'])
 @section('content')
     <h2 class="title has-text-weight-bold">Edit Product</h2>
-    <h4 class="subtitle"><strong>Product:</strong> {{ $product->name }}</h4>
+    <h4 class="subtitle"><strong>Product:</strong> {{ $product->name }} <a href="{{ route('products.show', $product) }}">(View)</a></h4>
     <style>
         select:required:invalid {
             color: gray;

@@ -17,7 +17,7 @@
             @forelse($products as $product)
                 <tr>
                     <th>{{ $product->id }}</th>
-                    <td>{{ $product->name }}</td>
+                    <td><a href="{{ route('products.show', $product) }}">{{ $product->name }}</a></td>
                     <td>{{ $product->stock }}</td>
                     <td>{{ $product->collection->name }}</td>
                     <td>{{ $product->updated_at->format('M jS Y h:ia') }}</td>

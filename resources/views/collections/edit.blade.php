@@ -1,7 +1,7 @@
 @extends('layout', ['page' => 'Create Collection'])
 @section('content')
     <h2 class="title has-text-weight-bold">Create Collection</h2>
-    <h4 class="subtitle"><strong>Collection:</strong> {{ $collection->name }}</h4>
+    <h4 class="subtitle"><strong>Collection:</strong> {{ $collection->name }} <a href="{{ route('collections.show', $collection) }}">(View)</a></h4>
     <div class="box">
         <form action="{{ route('collections.update', $collection)  }}" method="POST">
             @csrf

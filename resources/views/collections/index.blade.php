@@ -16,7 +16,7 @@
             @forelse($collections as $collection)
                 <tr>
                     <th>{{ $collection->id }}</th>
-                    <td>{{ $collection->name }}</td>
+                    <td><a href="{{ route('collections.show', $collection) }}">{{ $collection->name }}</a></td>
                     <td>{{ $collection->product_count() }}</td>
                     <td>{{ $collection->updated_at->format('M jS Y h:ia') }}</td>
                     <td class="has-text-right">
