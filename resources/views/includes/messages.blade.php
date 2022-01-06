@@ -4,6 +4,12 @@
     </div>
 @endif
 
+@foreach($errors->all() as $error)
+    <div class="notification is-danger is-light">
+        <span>{{ $error }}</span>
+    </div>
+@endforeach
+
 <script>
     window.onload = () => {
         setTimeout(function() {

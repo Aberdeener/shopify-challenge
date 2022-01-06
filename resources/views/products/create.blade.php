@@ -20,14 +20,14 @@
         <div class="field">
             <label class="label">Name<sup style="color: red">*</sup></label>
             <div class="control">
-                <input type="text" name="name" class="input" placeholder="Name" required>
+                <input type="text" name="name" class="input" placeholder="Name" required value="{{ old('name') }}">
             </div>
         </div>
 
         <div class="field">
             <label class="label">Stock<sup style="color: red">*</sup></label>
             <div class="control">
-                <input type="number" name="stock" class="input" required>
+                <input type="number" name="stock" class="input" required value="{{ old('stock') }}">
             </div>
         </div>
 
@@ -36,9 +36,9 @@
             <div class="control">
                 <div class="select">
                     <select name="collection_id" required>
-                        <option value="" disabled selected>Select Collection...</option>
+                        <option value="" disabled @if(old('collection_id') == null) selected @endif>Select Collection...</option>
                         @foreach($collections as $collection)
-                            <option value="{{ $collection->id }}">
+                            <option value="{{ $collection->id }}" @if(old('collection_id') == $collection->id) selected @endif>
                                 {{ $collection->name }}
                             </option>
                         @endforeach
