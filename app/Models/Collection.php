@@ -10,8 +10,10 @@ class Collection extends Model
 {
     use HasFactory;
 
-    public function products(): BelongsToMany
+    protected $guarded = [];
+
+    public function product_count(): int
     {
-        return $this->belongsToMany(Product::class);
+        return Product::where('collection_id', $this->id)->count();
     }
 }
