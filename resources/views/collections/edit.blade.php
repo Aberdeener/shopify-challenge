@@ -3,8 +3,9 @@
     <h2 class="title has-text-weight-bold">Create Collection</h2>
     <h4 class="subtitle"><strong>Collection:</strong> {{ $collection->name }}</h4>
     <div class="box">
-        <form action="{{ route('collections.store')  }}" method="POST">
+        <form action="{{ route('collections.update', $collection)  }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="field">
                 <label class="label">Name<sup style="color: red">*</sup></label>
                 <div class="control">

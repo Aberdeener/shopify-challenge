@@ -7,7 +7,7 @@
             <div class="field">
                 <label class="label">Name<sup style="color: red">*</sup></label>
                 <div class="control">
-                    <input type="text" name="name" class="input" placeholder="Name" required>
+                    <input type="text" name="name" class="input" placeholder="Name" required value="{{ old('name') }}">
                 </div>
             </div>
 

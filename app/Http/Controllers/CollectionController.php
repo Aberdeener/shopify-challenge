@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CollectionRequest;
 use App\Models\Collection;
-use Illuminate\Http\Request;
 
 class CollectionController extends Controller
 {
@@ -28,11 +28,11 @@ class CollectionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CollectionRequest $request)
     {
         Collection::create($request->all());
 
-        session()->put('success', 'Collection created successfully');
+        session()->flash('success', 'Collection created successfully');
 
         return redirect()->route('collections.index');
     }
@@ -60,7 +60,7 @@ class CollectionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Collection $collection)
+    public function update(CollectionRequest $request, Collection $collection)
     {
         $collection->update($request->all());
 
