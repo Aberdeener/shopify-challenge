@@ -8,6 +8,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Product Count</th>
+                <th>Updated At</th>
                 <th></th>
             </tr>
             </thead>
@@ -17,6 +18,7 @@
                     <th>{{ $collection->id }}</th>
                     <td>{{ $collection->name }}</td>
                     <td>{{ $collection->product_count() }}</td>
+                    <td>{{ $collection->updated_at->format('M jS Y h:ia') }}</td>
                     <td class="has-text-right">
                         <a class="button is-secondary" href="{{ route('collections.edit', $collection) }}" title="Edit">
                             <span class="icon is-small">
