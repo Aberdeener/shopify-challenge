@@ -13,7 +13,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($collections as $collection)
+            @forelse($collections as $collection)
                 <tr>
                     <th>{{ $collection->id }}</th>
                     <td>{{ $collection->name }}</td>
@@ -33,7 +33,11 @@
                         </button>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="6" class="has-text-centered">No collections found.</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
     </div>

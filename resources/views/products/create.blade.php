@@ -25,6 +25,13 @@
         </div>
 
         <div class="field">
+            <label class="label">Stock<sup style="color: red">*</sup></label>
+            <div class="control">
+                <input type="number" name="stock" class="input" required>
+            </div>
+        </div>
+
+        <div class="field">
             <label class="label">Category<sup style="color: red">*</sup></label>
             <div class="control">
                 <div class="select">

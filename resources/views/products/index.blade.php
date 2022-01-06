@@ -7,16 +7,18 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Stock</th>
                 <th>Collection</th>
                 <th>Updated At</th>
                 <th></th>
             </tr>
             </thead>
             <tbody>
-            @foreach($products as $product)
+            @forelse($products as $product)
                 <tr>
                     <th>{{ $product->id }}</th>
                     <td>{{ $product->name }}</td>
+                    <td>{{ $product->stock }}</td>
                     <td>{{ $product->collection->name }}</td>
                     <td>{{ $product->updated_at->format('M jS Y h:ia') }}</td>
                     <td class="has-text-right">
@@ -33,7 +35,11 @@
                         </button>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="6" class="has-text-centered">No products found.</td>
+                </tr>
+            @endforelse
             </tbody>
         </table>
     </div>

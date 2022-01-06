@@ -14,7 +14,7 @@ class CollectionFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'collection-' . $this->faker->words(3, true),
+            'name' => $this->faker->words(3, true),
         ];
     }
 }
