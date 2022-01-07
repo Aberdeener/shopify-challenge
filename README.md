@@ -63,6 +63,7 @@ To run the tests for this app, simply open your terminal to the directory where 
 
 ## :memo: Additional information
 The majority of the code in this repo is boilerplate code that Laravel uses to make the application work.
+
 Code I wrote is in the following locations:
 - `routes/web.php`
 - `app/Http/Controllers/*`
