@@ -6,6 +6,16 @@ It is written in PHP using the Laravel framework.
 
 There are some basic CRUD tests located in the `tests` directory.
 
+## :clipboard: Requirements
+:white_check_mark: Basic CRUD functionality of Products and Collections
+    - Create
+    - Read
+    - Update
+    - Delete
+
+:white_check_mark: Extra functionality
+    - "Ability to assign/remove inventory items to a named group/collection"
+
 ## :package: Installation
 To get this running, you'll first need to install PHP onto your computer.
 - There are installation instructions [here](https://www.php.net/manual/en/install.php)
