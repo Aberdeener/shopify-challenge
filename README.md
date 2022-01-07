@@ -8,10 +8,6 @@ There are some basic CRUD tests located in the `tests` directory.
 
 ## :clipboard: Requirements
 :white_check_mark: Basic CRUD functionality of Products and Collections
-    - Create
-    - Read
-    - Update
-    - Delete
 
 :white_check_mark: Extra functionality
     - "Ability to assign/remove inventory items to a named group/collection"
@@ -35,8 +31,11 @@ After you have Composer installed, you have to download this Git repository.
 
 Next, you'll have to install MySQL server onto your computer.
 - If you are on Windows, use the installer from [here](https://dev.mysql.com/downloads/installer/).
+- If you are on Linux, use this [installation guide](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install-linux-quick.html).
 - If you are on macOS, use this [installation guide](https://dev.mysql.com/doc/refman/8.0/en/macos-installation-pkg.html).
-- Use the MySQL command line to login and create a database for this application.
+- Use the MySQL command line to login and create a database for this application:
+    - `mysql -u root -p`
+    - `CREATE DATABASE <name>;`
     - *Take note of what you named the database!*
 ---
 
