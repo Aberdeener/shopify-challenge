@@ -41,7 +41,7 @@ Next, you'll have to install MySQL server onto your computer.
 
 Now we have to download all of the dependencies of the application with Composer.
 - Enter the directory you extracted this repository into in your terminal and run `composer install`.
-- *Depending on your internet connection, this might take up to a couple minutes.*
+    - *Depending on your internet connection, this might take up to a couple minutes.*
 ---
 
 Almost done!
