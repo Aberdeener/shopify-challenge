@@ -66,8 +66,16 @@ The majority of the code in this repo is boilerplate code that Laravel uses to m
 
 Code I wrote is in the following locations:
 - `routes/web.php`
+    - Creates the routes for the application.
+- `app/Models/*`
+    - Defines the models for the Eloquent ORM.
 - `app/Http/Controllers/*`
+    - Handle requests made to a specific CRUD route.
 - `app/Http/Requests/*`
+    - Validate form submissions.
 - `database/factories/*`
+    - Generates fake data for the application.
 - `database/migrations/*`
+    - Define the database schema.
 - `resources/views/*`
+    - Blade template engine code to create the HTML pages from.
