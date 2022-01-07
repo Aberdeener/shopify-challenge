@@ -34,7 +34,7 @@
             </div>
 
             <div class="field">
-                <label class="label">Category<sup style="color: red">*</sup></label>
+                <label class="label">Collection<sup style="color: red">*</sup></label>
                 <div class="control">
                     <div class="select">
                         <select name="collection_id" required>
