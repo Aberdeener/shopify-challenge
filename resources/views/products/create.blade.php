@@ -27,7 +27,7 @@
         <div class="field">
             <label class="label">Stock<sup style="color: red">*</sup></label>
             <div class="control">
-                <input type="number" name="stock" class="input" required value="{{ old('stock') }}">
+                <input type="number" name="stock" class="input" required value="{{ old('stock') ?? 0 }}">
             </div>
         </div>
 
